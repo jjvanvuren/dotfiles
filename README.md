@@ -2,7 +2,7 @@
 A minimal Arch Linux install with [Hyprland](https://hyprland.org).
 
 ## Required Packages
-### [!NOTE]
+### NOTE!
 - Install `kitty` before installing `hyprland`.
 - Install `paru` with the following to access AUR:
 ```sh
