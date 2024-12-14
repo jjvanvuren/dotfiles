@@ -13,7 +13,7 @@ makepkg -si
 ```
 ### Pacman
 ```
-base-devel brightnessctl fastfetch fd fzf git htop hyprland hyprlock hyprpaper hyprpicker imv kitty lazygit luarocks mpv networkmanager noto-fonts noto-fonts-emoji npm nwg-look papirus-icon-theme ripgrep starship stow swaync thunar tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd vim waybar wget wofi xclip yazi zsh
+base-devel brightnessctl fastfetch fd fzf git htop hyprland hyprlock hyprpaper hyprpicker imv kitty lazygit luarocks mpv networkmanager noto-fonts noto-fonts-emoji npm nwg-look openssh papirus-icon-theme ripgrep starship stow swaync thunar tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd vim waybar wget wofi xclip yazi zsh
 ```
 ### AUR
 ```
