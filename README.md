@@ -1,9 +1,8 @@
 # dotfiles
-A minimal Arch Linux install with [Hyprland](https://hyprland.org).
+A minimal Arch Linux install with i3.
 
 ## Required Packages
 ### NOTE!
-- Install `kitty` before installing `hyprland`.
 - Install `paru` with the following to access AUR:
 ```sh
 sudo pacman -S --needed base-devel
@@ -13,11 +12,11 @@ makepkg -si
 ```
 ### Pacman
 ```
-base-devel brightnessctl fastfetch fd file-roller fzf git htop hyprland hyprlock hyprpaper hyprpicker imv kitty lazygit less luarocks mpv networkmanager noto-fonts noto-fonts-emoji npm nwg-look openssh papirus-icon-theme ripgrep starship stow swaync thunar tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd vim waybar wget wofi xclip yazi zsh
+base-devel discord fastfetch fd file-roller feh fzf git htop kitty lazygit less luarocks mpv networkmanager noto-fonts noto-fonts-emoji npm nwg-look openssh papirus-icon-theme pavucontrol picom polybar ripgrep rofi sddm starship stow thunar tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd vim wget xclip yazi zsh
 ```
 ### AUR
 ```
-brave-bin catppuccin-gtk-theme-macchiato hyprshot neovim-git pwvucontrol rose-pine-cursor rose-pine-hyprcursor sddm-git
+brave-bin catppuccin-gtk-theme-macchiato neovim-git teams
 ```
 ## SDDM Theme
 - Config location: `/usr/lib/sddm/sddm.conf.d/default.conf`
