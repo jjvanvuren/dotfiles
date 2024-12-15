@@ -35,7 +35,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color=000000 --n
 exec --no-startup-id nm-applet
 
 exec --no-startup-id picom
+
 exec_always --no-startup-id dunst
+exec_always --no-startup-id flameshot
 
 # polybar
 exec_always --no-startup-id killall polybar

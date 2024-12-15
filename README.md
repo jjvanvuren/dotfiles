@@ -12,7 +12,7 @@ makepkg -si
 ```
 ### Pacman
 ```
-base-devel discord brightnessctl dunst fastfetch fd file-roller feh fzf git htop kitty lazygit less luarocks mpv networkmanager noto-fonts noto-fonts-emoji npm nwg-look openssh papirus-icon-theme pavucontrol picom polybar ripgrep rofi sddm starship stow thunar tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd vim wget xclip yazi zsh
+base-devel discord brightnessctl dunst fastfetch flameshot fd file-roller feh fzf git htop kitty lazygit less luarocks mpv networkmanager noto-fonts noto-fonts-emoji npm nwg-look openssh papirus-icon-theme pavucontrol picom polybar ripgrep rofi sddm starship stow thunar tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd vim wget xclip yazi zsh
 ```
 ### AUR
 ```
