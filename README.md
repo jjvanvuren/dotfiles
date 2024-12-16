@@ -19,7 +19,7 @@ arandr autorandr base-devel discord brightnessctl dunst fastfetch flameshot fd f
 brave-bin catppuccin-gtk-theme-macchiato neovim-git teams-for-linux-bin
 ```
 ## Multiple Displays
-To easily manage multiple displays see:
+To easily manage multiple displays see:  
 https://linuxconfig.org/how-to-automatically-change-x11-displays-setup-with-autorandr-on-linux
 
 ## SDDM Theme
