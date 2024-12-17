@@ -2,19 +2,18 @@
 A minimal Arch Linux install with i3.
 
 ## Required Packages
-### NOTE!
-- Install `paru` with the following to access AUR:
+### Pacman
+```
+arandr autorandr base-devel bat bluez bluez-utils discord brightnessctl dunst fastfetch flameshot fd file-roller feh fzf git htop impala iwd kitty lazygit less luarocks mpv noto-fonts noto-fonts-emoji npm nwg-look openssh papirus-icon-theme pavucontrol picom polybar ripgrep ristretto rofi sddm starship stow thunar tmux tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd udisks2 udiskie vim wget xclip yazi zsh
+```
+### AUR
+- Install `paru`:
 ```sh
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 ```
-### Pacman
-```
-arandr autorandr base-devel bat bluez bluez-utils discord brightnessctl dunst fastfetch flameshot fd file-roller feh fzf git htop impala iwd kitty lazygit less luarocks mpv noto-fonts noto-fonts-emoji npm nwg-look openssh papirus-icon-theme pavucontrol picom polybar ripgrep ristretto rofi sddm starship stow thunar tmux tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd udisks2 udiskie vim wget xclip yazi zsh
-```
-### AUR
 ```
 bluetui-bin brave-bin catppuccin-gtk-theme-macchiato neovim-git teams-for-linux-bin 
 ```
@@ -30,7 +29,7 @@ NameResolvingService=systemd
 - Enable `iwd.service` & `systemd-resolved.service`.
 - Use `iwctl` or `impala` to connect to Wi-Fi.
 
-# Bluetooth
+## Bluetooth
 - Enable `bluetooth.service`
 - Manage devices with `bluetui`
 
