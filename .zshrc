@@ -3,7 +3,8 @@ export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 alias ll="ls -alF --color=auto"
 alias la="ls -A --color=auto"
 alias l="ls -CF --color=auto"
-alias cat='bat -np'
+alias cat="bat -np"
+alias s="kitty +kitten ssh"
 
 # Git WIP commits
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign --message "--wip-- [skip ci]"'
