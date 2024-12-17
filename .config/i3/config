@@ -32,12 +32,9 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color=000000 --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
 exec --no-startup-id picom
 
+exec_always --no-startup-id udiskie --tray
 exec_always --no-startup-id dunst
 exec_always --no-startup-id flameshot
 
@@ -68,7 +65,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec $terminal
 
 # start rofi
-bindsym $mod+space exec rofi -show combi
+bindsym $mod+space exec "rofi -modi drun,run -show drun"
 
 # start browser
 bindsym $mod+Shift+Return exec $browser
@@ -82,14 +79,6 @@ bindsym $mod+Escape exec loginctl lock-session
 # take screenshot
 bindsym Print exec flameshot gui
 bindsym Shift+Print exec flameshot screen
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmENU_RUn
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -138,8 +127,12 @@ bindsym $mod+Shift+f focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# Dunst notifications
+bindsym $mod+n exec --no-startup-id dunstctl history-pop
+bindsym $mod+Shift+n exec --no-startup-id dunstctl close-all && dunstctl history-clear
+
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -197,10 +190,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -224,7 +217,6 @@ gaps inner 5
 gaps outer 0
 smart_borders on
 smart_gaps on
-
 
 # Catppuccin Macchiato colours
 set $rosewater #f4dbd6
