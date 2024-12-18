@@ -33,15 +33,15 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color=000000 --nofork
 
 exec --no-startup-id picom
-
-exec_always --no-startup-id udiskie --tray
-exec_always --no-startup-id dunst
-exec_always --no-startup-id flameshot
+exec --no-startup-id udiskie --tray
+exec --no-startup-id dunst
+exec --no-startup-id flameshot
 
 # polybar
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec_always feh --bg-fill ~/.config/backgrounds/ultrawide-forest.jpg
+
+exec_always feh --bg-fill ~/.config/backgrounds/big-sur-mountains.jpg
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
