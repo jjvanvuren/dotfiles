@@ -28,9 +28,9 @@ exec --no-startup-id dex --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# xss-lock grabs a logind suspend inhibit lock and will use betterlockscreen to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color=000000 --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dimblur
 
 exec --no-startup-id picom
 exec --no-startup-id udiskie --tray
@@ -74,7 +74,8 @@ bindsym $mod+Shift+Return exec $browser
 bindsym $mod+Shift+q kill
 
 # lock screen
-bindsym $mod+Escape exec loginctl lock-session
+# bindsym $mod+Escape exec loginctl lock-session
+bindsym $mod+Escape exec betterlockscreen -l dimblur
 
 # take screenshot
 bindsym Print exec flameshot gui
@@ -178,7 +179,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 
 bindsym $mod+Shift+e exit
-bindsym $mod+Shift+s exec loginctl lock-session && systemctl suspend
+bindsym $mod+Shift+s exec systemctl suspend
 
 bindsym $mod+Shift+Escape exec shutdown now
 
