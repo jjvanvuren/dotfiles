@@ -4,7 +4,7 @@ A minimal Arch Linux install with i3.
 ## Required Packages
 ### Pacman
 ```
-arandr autorandr base-devel bat bluez bluez-utils discord brightnessctl dunst fastfetch flameshot fd file-roller feh fzf git htop impala iwd kitty lazygit less luarocks mpv neovim noto-fonts noto-fonts-emoji npm nwg-look openssh papirus-icon-theme pavucontrol picom polybar ripgrep ristretto rofi sddm starship stow thunar tmux tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd udisks2 udiskie vim wget xclip yazi zsh
+arandr autorandr base-devel bat bluez bluez-utils btop discord brightnessctl dunst fastfetch flameshot fd file-roller feh fzf git htop impala iwd kitty lazygit less luarocks mpv neovim noto-fonts noto-fonts-emoji npm nwg-look openssh papirus-icon-theme pavucontrol picom polybar ripgrep ristretto rofi sddm stow thunar tmux tree tree-sitter-cli ttf-font-awesome ttf-jetbrains-mono-nerd udisks2 udiskie vim wget xclip yazi zsh
 ```
 ### AUR
 - Install `paru`:
@@ -15,7 +15,7 @@ cd paru
 makepkg -si
 ```
 ```
-betterlockscreen bluetui-bin brave-bin catppuccin-gtk-theme-macchiato i3lock-color teams-for-linux-bin 
+betterlockscreen bluetui-bin brave-bin catppuccin-gtk-theme-macchiato i3lock-color teams-for-linux-bin zsh-theme-powerlevel10k-git
 ```
 ## Wi-Fi
 - Create `/etc/iwd/main.conf` with the following:
