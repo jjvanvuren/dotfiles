@@ -7,7 +7,6 @@ bluez-utils
 brightnessctl
 btop
 btrfs-progs
-cmatrix
 cpufetch
 cronie
 deja-dup
@@ -39,8 +38,6 @@ lazygit
 less
 libpulse
 libva-intel-driver
-lightdm
-lightdm-gtk-greeter
 linux
 linux-firmware
 lua51-luarocks-build-rust-mlua
@@ -74,7 +71,6 @@ rofi
 sddm
 smartmontools
 speedtest-cli
-steam
 stow
 thunar
 thunderbird
