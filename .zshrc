@@ -12,6 +12,7 @@ alias la="ls -A --color=auto"
 alias l="ls -CF --color=auto"
 alias cat="bat -np"
 alias s="kitty +kitten ssh"
+alias paclist="pacman -Qqen > $HOME/dotfiles/pkglist.txt && pacman -Qqem | grep -vE '^(paru|paru-debug)$' > $HOME/dotfiles/aurpkglist.txt"
 
 # Git WIP commits
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign --message "--wip-- [skip ci]"'
@@ -27,8 +28,6 @@ function gunwipall() {
   fi
 }
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -36,3 +35,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
 [[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
