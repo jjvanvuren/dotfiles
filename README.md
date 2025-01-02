@@ -15,6 +15,11 @@ makepkg -si
 sudo pacman -S --needed --noconfirm - < ~/dotfiles/pkglist.txt
 paru -S --needed --noconfirm - < ~/dotfiles/aurpkglist.txt
 ```
+## Python Global Environment
+```sh
+mkdir -p ~/.venvs
+python -m venv ~/.venvs/global
+```
 ## Wi-Fi
 - Create `/etc/iwd/main.conf` with the following:
 ```
