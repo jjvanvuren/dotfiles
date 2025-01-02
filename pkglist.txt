@@ -1,5 +1,6 @@
 arandr
 autorandr
+aws-cli
 base
 base-devel
 bat
@@ -42,6 +43,7 @@ linux
 linux-firmware
 lua51-luarocks-build-rust-mlua
 luarocks
+ly
 mpv
 nano
 neovim
@@ -54,6 +56,7 @@ noto-fonts-extra
 npm
 nwg-look
 obsidian
+openvpn
 papirus-icon-theme
 pavucontrol
 picom
@@ -62,6 +65,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 polybar
+python-pexpect
 python-pipx
 qt5-quickcontrols2
 qt6-svg
@@ -72,12 +76,14 @@ sddm
 smartmontools
 speedtest-cli
 stow
+terminus-font
 thunar
 thunderbird
 tmux
 tree
 tree-sitter-cli
 ttf-font-awesome
+ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 udiskie
 udisks2

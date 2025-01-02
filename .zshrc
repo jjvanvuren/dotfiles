@@ -28,6 +28,11 @@ function gunwipall() {
   fi
 }
 
+#Activate global python virtual environment
+if [[ -d "$HOME/.venvs/global" ]]; then
+  source $HOME/.venvs/global/bin/activate
+fi
+
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

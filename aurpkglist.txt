@@ -4,7 +4,6 @@ brave-bin
 catppuccin-gtk-theme-macchiato
 i3lock-color
 logiops
-openvpn3
 teams-for-linux-bin
 xinput-gui
 zsh-theme-powerlevel10k-git
