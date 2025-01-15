@@ -6,13 +6,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin
+export PATH=/usr/lib/ccache/bin/:$PATH
 
 alias ll="ls -alF --color=auto"
 alias la="ls -A --color=auto"
 alias l="ls -CF --color=auto"
 alias cat="bat -np"
-alias s="kitty +kitten ssh"
+alias s="kitten ssh"
 alias paclist="pacman -Qqen > $HOME/dotfiles/pkglist.txt && pacman -Qqem | grep -vE '^(paru|paru-debug)$' > $HOME/dotfiles/aurpkglist.txt"
+alias renderlock="betterlockscreen -u /home/jacques/.config/backgrounds/big-sur-mountains.jpg"
+alias weather="wthrr -f d"
 
 # Git WIP commits
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign --message "--wip-- [skip ci]"'

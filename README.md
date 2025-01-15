@@ -2,15 +2,7 @@
 A minimal Arch Linux install with i3.
 
 ## Packages
-### AUR
-- Install `paru`:
-```sh
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-```
-### Install
+Add the [Chaotic-AUR](https://aur.chaotic.cx/docs) and then:
 ```sh
 sudo pacman -S --needed --noconfirm - < ~/dotfiles/pkglist.txt
 paru -S --needed --noconfirm - < ~/dotfiles/aurpkglist.txt
@@ -47,3 +39,9 @@ https://linuxconfig.org/how-to-automatically-change-x11-displays-setup-with-auto
 ## SDDM Theme
 - Config location: `/usr/lib/sddm/sddm.conf.d/default.conf`
 - See [catppuccin/sddm](https://github.com/catppuccin/sddm) for install. 
+
+## Qt Themes
+Add the following to `/etc/environment` to use `kvantum` to manage Qt themes:
+```sh
+export QT_STYLE_OVERRIDE=kvantum
+```

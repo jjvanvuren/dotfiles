@@ -32,13 +32,12 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dimblur
 
-exec --no-startup-id picom
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec --no-startup-id udiskie --tray
 exec --no-startup-id dunst
 exec --no-startup-id flameshot
 
 # polybar
-exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
 exec_always feh --bg-fill ~/.config/backgrounds/big-sur-mountains.jpg
@@ -53,6 +52,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # screen brightness
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
+# Media player controls 
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -176,9 +180,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
 
+# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exit
+
 bindsym $mod+Shift+s exec systemctl suspend
 
 bindsym $mod+Shift+Escape exec shutdown now
@@ -213,6 +218,7 @@ bindsym $mod+r mode "resize"
 # Remove window titlebars
 default_border pixel 2
 default_floating_border pixel 2
+for_window [class=".*"] border pixel 2
 
 gaps inner 5
 gaps outer 0
