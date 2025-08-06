@@ -4,8 +4,8 @@ A minimal Arch Linux install with i3.
 ## Packages
 Add the [Chaotic-AUR](https://aur.chaotic.cx/docs) and then:
 ```sh
-sudo pacman -S --needed --noconfirm - < ~/dotfiles/pkglist.txt
-paru -S --needed --noconfirm - < ~/dotfiles/aurpkglist.txt
+sudo pacman -S --needed --noconfirm - < ~/.dotfiles/pkglist.txt
+paru -S --needed --noconfirm - < ~/.dotfiles/aurpkglist.txt
 ```
 ## Python Global Environment
 ```sh
