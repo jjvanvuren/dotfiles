@@ -1,4 +1,6 @@
-freetube-bin
+python-onetimepass
 teams-for-linux-bin
-wthrr
+ttf-ms-win11-auto
+wthrr-bin
 xinput-gui
+zsa-keymapp-bin

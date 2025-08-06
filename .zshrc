@@ -13,7 +13,7 @@ alias la="ls -A --color=auto"
 alias l="ls -CF --color=auto"
 alias cat="bat -np"
 alias s="kitten ssh"
-alias paclist="pacman -Qqen > $HOME/dotfiles/pkglist.txt && pacman -Qqem | grep -vE '^(paru|paru-debug)$' > $HOME/dotfiles/aurpkglist.txt"
+alias paclist="pacman -Qqen > $HOME/.dotfiles/pkglist.txt && pacman -Qqem | grep -vE '^(paru|paru-debug)$' > $HOME/.dotfiles/aurpkglist.txt"
 alias renderlock="betterlockscreen -u /home/jacques/.config/backgrounds/big-sur-mountains.jpg"
 alias weather="wthrr -f d"
 
