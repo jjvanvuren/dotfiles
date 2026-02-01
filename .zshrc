@@ -1,12 +1,18 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Ensure compatibility with tmux and Kitty
+export TERM=tmux-256color
 
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 export PATH=/usr/lib/ccache/bin/:$PATH
+
+# History configuration
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+setopt EXTENDED_HISTORY     # save timestamp + duration with each command
+setopt INC_APPEND_HISTORY   # write to file after every command (not just on exit)
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS     # don't save duplicate lines consecutively
+setopt HIST_IGNORE_SPACE    # don't save lines starting with space
 
 alias ll="ls -alF --color=auto"
 alias la="ls -A --color=auto"
@@ -36,13 +42,12 @@ if [[ -d "$HOME/.venvs/global" ]]; then
   source $HOME/.venvs/global/bin/activate
 fi
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
-[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
+# Initialize Starship prompt
+eval "$(starship init zsh)"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
