@@ -10,7 +10,6 @@
   /* === Modules Order === */
   "modules-left": [
     "custom/archicon",
-    "clock",
     "cpu",
     "memory",
     "disk",
@@ -26,7 +25,7 @@
     "pulseaudio/slider",
     "pulseaudio",
     "network",
-    "hyprland/language"
+    "clock"
   ],
   /* === Modules Left === */
   "custom/archicon": {
@@ -36,7 +35,7 @@
   },
   "clock": {
     "timezone": "Australia/Sydney",
-    "format": "{:%H:%M  %d, %m}",
+    "format": "{:%H:%M  %d/%m}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "month"

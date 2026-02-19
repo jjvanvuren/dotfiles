@@ -25,8 +25,7 @@ window#waybar.hidden {
 #idle_inhibitor,
 #pulseaudio,
 #pulseaudio-slider,
-#network,
-#language {
+#network {
   color: #161320;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -44,9 +43,8 @@ window#waybar.hidden {
 }
 
 /* Separation to the rigth */
-#clock,
 #temperature,
-#language {
+#clock {
   margin-right: 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -164,17 +162,25 @@ window#waybar.hidden {
 #pulseaudio-slider slider {
   min-height: 0px;
   min-width: 0px;
+  background: #1A1826;
+  border-radius: 50%;
+}
+
+#pulseaudio-slider trough {
+  min-height: 6px;
+  border-radius: 3px;
+}
+
+#pulseaudio-slider highlight {
+  min-height: 6px;
+  border-radius: 3px;
+  background: #1A1826;
 }
 
 
 #network {
   background: #CBA6F7;
   padding-right: 13px;
-}
-
-#language {
-  background: #A6E3A1;
-  padding-right: 15px;
 }
 
 /* === Optional animation === */
